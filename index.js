@@ -63,7 +63,7 @@ const showplants = (plants) => {
     plants.forEach(plant => {
         const card = document.createElement("div");
         card.innerHTML += `
-        <div class="border border-gray-300 rounded-lg p-2 bg-white h-[400px]">
+        <div class="border border-gray-300 rounded-lg p-2 bg-white h-[400px] w-[100%]">
         <div> <img src="${plant.image}" alt="${plant.name}" class="w-full h-40 object-cover rounded-md"/> </div> <div class="p-1 item">
          <h1 class="font-extrabold text-lg name">${plant.name}</h1> 
          <p class="text-sm text-gray-500 plant-desc">${plant.description}</p> 
@@ -85,12 +85,16 @@ let totalprice = 0;
 const addToCardList = (name, price) => {
     price = parseFloat(price);
     const div = document.createElement("div");
-    div.className = "flex justify-between items-center bg-white p-2 rounded mb-2 shadow";
-    div.innerHTML = `<div class=" flex flex-col">
+    div.className = "flex justify-between items-center bg-white p-2 rounded mb-2 ";
+    div.innerHTML = `<div class="bg-green-200 w-[100%] rounded-xl flex flex-row p-2 justify-between items-center">
+    <div class=" flex flex-col ">
         <span>${name}</span>
         <span class="text-green-600 font-bold">${price}</span>
         </div>
+        <div>
         <button class="delete  text-red px-2 py-1 rounded"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        </div>
     `;
     div.querySelector(".delete").onclick = () => {
         cardListContainer.removeChild(div);
@@ -107,7 +111,7 @@ const total = () => {
 
 function openModal(plant) {
     modalbox.innerHTML = `
-        <div class="bg-white p-4 rounded-lg w-100 relative ">
+        <div class="bg-white p-1 rounded-lg w-100 relative ">
             <h1 class="font-bold text-lg mb-2">${plant.name}</h1>
             <img src="${plant.image}" alt="${plant.name}" class="w-full h-40 object-cover rounded-md mb-2"/>
          <p><strong>Category:</strong> ${plant.category}</p>  
