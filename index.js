@@ -26,6 +26,7 @@ const showcategory = (categories) => {
         const all = document.querySelectorAll("li");
         all.forEach(li => li.classList.remove("bg-green-600"));
         if (e.target.tagName === "LI") {
+            showLoading();
             e.target.classList.add("bg-green-600");
             loadcontainer(e.target.id);
         }
@@ -80,7 +81,7 @@ const showplants = (plants) => {
         cardContainer.appendChild(card);
     });
 }
-
+cardContainer
 let totalprice = 0;
 const addToCardList = (name, price) => {
     price = parseFloat(price);
@@ -131,6 +132,11 @@ modalbox.addEventListener("click", e => {
     if (e.target === modalbox) modalbox.classList.add("hidden");
 });
 
+const showLoading = () => {
+    cardContainer.innerHTML = `
+     <div class="bg-green-500 p-3 ">Loading...</div>
+    `
+}
 
 
 
