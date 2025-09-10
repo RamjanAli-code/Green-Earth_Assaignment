@@ -19,7 +19,9 @@
 
 
 #Block-scoped<br>
+
 #Do not redeclared in the same scope<br>
+
 #Do not reassign<br>
 
 ---
@@ -72,6 +74,7 @@ Key feature arrow function in ES6:<br>
 
 
 Destructing assaignment is a feature in ES6 that properties from objects into separate variables in a neat way.<br>
+
 4.1:Array Destructuring<br>
 
 Example:<br>
@@ -84,32 +87,66 @@ console.log("Num is",a,b,c);
 
 4.2:Object Destructuring<br>
 
-4.3:Nested Destructuring<br>
-
-4.4:Mixed Destructuring<br>
 Example:<br>
-
 ```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>create and insert element</title>
-</head>
-<body>
-    <div id="container">
-        <p>first element</p>
-    </div><br>
-    <script>
-        //create
-        const newp=document.createElement("p");
-        newp.textContent="second element";
-        //insert
-        document.getElementById("container").appendChild(newp);
-    </script>
-</body>
-</html>
+const user={name:"Ramjan Ali", age:22};
+const {name,age}=user;
+console.log("Name and age is :",name,age);
 
 ```
+
+4.3:Nested Destructuring<br>
+
+Example:<br>
+```html
+const num=[1,[2,3],4];
+const[a,[b,c],d]=num;
+console.log("Num is",a,b,c,d);
+
+```
+
+4.4:Mixed Destructuring<br>
+
+Example:<br>
+```html
+const user= [
+{id:1,name:"Ramjan",age:25},
+{id:2,name:"Ramjan khan",age:23}
+];
+const[
+{name:firstUser,age:firstAge},
+{name:secondUser,age:secondAge},
+];
+console.log(firstUser,firstAge);
+console.log(secondUser,secondAge);
+```
+
+---
+
+5.Answer:template literals in ES6 and its different from string concatenation:<br>
+
+Template literals are strings enclosed in backticks.They allow easier interpolation of variables,<br>multiline string and embeded expression.<br>
+
+5.1:String Concatenation<br>
+
+
+#Using double quatation or single quatation <br>
+
+#Multiline needs \n or +<br>
+
+#Must concatenate manually<br>
+
+#Less readable <br>
+
+5.2:Template Literal <br>
+
+
+#Using Backticks <br>
+
+#Naturally supprted multiline<br>
+
+#Can embeded any expreesion<br>
+
+#Cleaner and easier to read<br>
+
 ---
