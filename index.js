@@ -18,7 +18,7 @@ category();
 const showcategory = (categories) => {
     categories.forEach(category => {
         categoryContainer.innerHTML += `
-            <li id="${category.id}" class="flex py-3 items-center hover:bg-green-600">${category.category_name}</li>
+            <li id="${category.id}" class="flex py-3 items-center hover:bg-green-600 rounded-md">${category.category_name}</li>
         `;
     });
 
