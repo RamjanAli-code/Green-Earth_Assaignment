@@ -27,31 +27,41 @@
         <div><button class=" btn btn-warning rounded-3xl text-[#15803D]">Plant a Tree</button></div>
     </header>
     <!-- Banner -->
-    <div class="bg-[#CFF0DC] h-[907px] flex justify-between flex-col md:flex-row md:h-[323px]">
-        <div class="w[1/3] flex-1"><img src="./assets/hero-leaf1.png" alt=""></div>
+    <div class="bg-[#CFF0DC] h-[5007px] flex justify-between flex-col  md:flex-row md:h-[323px]">
+        <div class=" w-full     md:w[1/3] flex-1"><img src="./assets/hero-leaf1.png" alt=""></div>
         <div class="w[1/3] flex-1 flex items-center flex-col py-8 justify-center text-center ">
             <h1 class="font-bold text-2xl md:text-3xl  ">Plant a Tree, Grow a Future</h1>
-            <p class="text-[#384352]  py-6 items-center">Join our mission to plant 1 million trees and make the Earth greener for future generations.
+            <p class="text-[#384352] py:1 md:py-6 items-center">Join our mission to plant 1 million trees and make the Earth greener for future generations.
             </p>
             <div><button class=" btn btn-warning rounded-3xl text-[#15803D]">Get Involved</button></div>
         </div>
         <div class="w[1/3] flex-1"><img src="./assets/hero-leaf2.png" alt=""></div>
     </div>
-    <div class="h-[875px] bg-red-200 mt-[60px]">
-        <h1>Choose Your Trees</h1>
-        <div class="bg-yellow-300 h-[600px] flex items-center justify-center w-5/6 mx-auto">
+    <div class="h-[1300px] bg-red-200 mt-[60px]">
+        <h1 class="font-bold text-2xl flex items-center justify-center">Choose Your Trees</h1>
+        <div class="bg-yellow-300 h-[1200px]  flex  grid-cols-3  items-center justify-center w-full mx-auto">
 
 
-            <div id="categoryContainer" class="w-1/6 bg-white h-[600px]">
-                <h1>Category</h1>
-                <p>All Tree</p>
-                <ul id="listcontainer"></ul>
+            <div class="flex ">
+                <div id="categoryContainer" class="w-[200px] bg-white  rounded-md pl-2">
+                    <ul id="listcontainer"></ul>
+                </div>
+                <div id="cardContainer" class="w-[800px] h-[3300px] md:h-[812px] grid grid-cols-1 md:grid-cols-3 gap-3 flex-1 mx-2"></div>
             </div>
-            <div id="cardContainer" class="w-3/6  h-[600px] flex gap-3"></div>
-            <div id="cardlistContainer" class="w-1/6 bg-green-500 h-[600px]"></div>
 
+            <div class="bg-green-500 h-[800px] rounded-md">
+                <h3 class="font-bold text-xl">Your Card</h3>
+                <div id="cardListContainer" class="w-[200px] flex-1 "> </div>
+                <p id="totalContainer" class="font-bold flex justify-end"></p>
+            </div>
         </div>
     </div>
+    <!-- Modal Container -->
+    <!-- <div id="modal" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"></div> -->
+    <!-- <div id="modal" class="h-[100px] w-[100px] bg-red-600"></div> -->
+    <!-- Modal -->
+    <div id="modal" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"></div>
+
     <div class=" h-[780px] mt-[20px]  w-3/5  md:mt-[30px] md:w-3/5 mx-auto md:h-[500px] ">
         <h1 class="font-bold text-xl flex  items-center justify-center md:text-3xl ">About the Campaign</h1>
         <div class="flex py-8 flex-col md:flex-row">
