@@ -34,11 +34,13 @@ const showcategory = (categories) => {
 };
 
 const allplants = () => {
+    showLoading();
     fetch("https://openapi.programming-hero.com/api/plants")
         .then(res => res.json())
         .then(data => {
             const plants = data.plants.slice(0, 6);
             showplants(plants);
+
         })
         .catch(err => console.log(err));
 };
@@ -134,7 +136,7 @@ modalbox.addEventListener("click", e => {
 
 const showLoading = () => {
     cardContainer.innerHTML = `
-     <div class="bg-green-500 p-3 ">Loading...</div>
+     <div class="bg-green-500 p-3 h-[200px] w-[200px] flex justify-center items-center ">Loading...</div>
     `
 }
 
